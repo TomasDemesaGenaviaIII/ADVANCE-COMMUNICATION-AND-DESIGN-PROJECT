@@ -118,18 +118,33 @@
 
 
 ➥ 1. ESP8266 NODEMCU
+
 ➥ 2. L298N MOTOR DRIVER
+
 ➥ 3. 2PCS WHEEL 65mm
+
 ➥ 4. 2PCS DC GEAR MOTOR 915RPM
+
 ➥ 5. METAL BALL CASTER
+
 ➥ 6. HEXAGONAL BRASS COOPER 4mm
+
 ➥ 7. PK CELL 2200mAh lithiu-ion 18650 Batt 3.7v
+
 ➥ 8. PK CELL Holder
+
 ➥ 9. jumping wires
+
 ➥ 10. Solid wire Guage 22
+
 ➥ 11. ACRYLIC (CHASSIS)
 
 
+
+| QUANTITY | DESCRIPTION | USE | AMOUNT |
+| -------- | -------- |
+| Row 1, Col 1 | Row 1, Col 2 |
+| Row 2, Col 1 | Row 2, Col 2 |
 
 
 
