@@ -173,168 +173,212 @@
 
 >> # 👩🏻‍💻ARDUINO CODES
 
-#define ENA   14                    
-#define IN_1  15                 
-#define IN_3  2 
-
 #include <ESP8266WiFi.h>
-
-#include <WiFiClient.h> 
-
 #include <ESP8266WebServer.h>
-
-String command;            
-int speedCar = 915;         
-int speed_Coeff = 3;
-
-const char* ssid = "Wifi Car";
 
 ESP8266WebServer server(80);
 
-void setup() 
-{
- 
- pinMode(ENA, OUTPUT); 
- 
- pinMode(IN_1, OUTPUT);
- 
- pinMode(IN_3, OUTPUT);
-  
-  
-  Serial.begin(115200);
-  
+// Motor pins
+#define IN1 D1
+#define IN2 D2
+#define IN3 D3
+#define IN4 D4
+#define ENA D5
+#define ENB D6
 
+int speedVal = 915;   // Default speed (0–1023)
 
-  WiFi.mode(WIFI_AP);
-  
-  WiFi.softAP(ssid);
+void setup() {
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+  pinMode(ENA, OUTPUT);
+  pinMode(ENB, OUTPUT);
 
-  IPAddress myIP = WiFi.softAPIP();
-  
-  Serial.print("AP IP address: ");
-  
-  Serial.println(myIP);
-  
- 
+  WiFi.softAP("Robot_Car", "Tom@s916991");
 
-     server.on ( "/", HTTP_handleRoot );
-     server.onNotFound ( HTTP_handleRoot );
-     server.begin();    
+  server.on("/", handleRoot);
+  server.on("/move", handleMove);
+  server.on("/speed", handleSpeed);
+
+  server.begin();
+
+  stopMotor();
+  analogWrite(ENA, speedVal);
+  analogWrite(ENB, speedVal);
 }
 
-void goAhead()
-  { 
-
-      digitalWrite(IN_1, HIGH);
-      digitalWrite(IN_3, HIGH);
-      analogWrite(ENA, speedCar);
-
-  }
-
-void goBack()
-  { 
-
-      digitalWrite(IN_1, LOW);
-      digitalWrite(IN_3, LOW);
-      analogWrite(ENA, speedCar);
-  }
-
-void goRight()
-  { 
-
-      digitalWrite(IN_1, HIGH);
-      digitalWrite(IN_3, LOW);
-      analogWrite(ENA, speedCar);
-  }
-
-void goLeft()
-  {
-
-      digitalWrite(IN_1, LOW);
-      digitalWrite(IN_3, HIGH);
-      analogWrite(ENA, speedCar);
-  }
-
-void goAheadRight()
-   {
-      
-      digitalWrite(IN_1, LOW);
-      digitalWrite(IN_3, HIGH);
-      analogWrite(ENA, speedCar/speed_Coeff);
-   }
-
-void goAheadLeft()
-  {
-
-      digitalWrite(IN_1, HIGH);
-      digitalWrite(IN_3, LOW);
-      analogWrite(ENA, speedCar/speed_Coeff);
-  }
-
-void goBackRight()
-  { 
-
-      digitalWrite(IN_1, LOW);
-      digitalWrite(IN_3, HIGH);
-      analogWrite(ENA, speedCar/speed_Coeff);
-  }
-
-void goBackLeft()
-  { 
-
-      digitalWrite(IN_1, HIGH);
-      digitalWrite(IN_3, LOW);
-      analogWrite(ENA, speedCar);
-  }
-
-void stopRobot()
- {  
-
-      digitalWrite(IN_1, LOW);
-      digitalWrite(IN_3, LOW);
-      analogWrite(ENA, speedCar);
- }
-
-void loop() 
-{
-    server.handleClient();
-    
-      command = server.arg("State");
-      if (command == "F") goAhead();
-      else if (command == "B") goBack();
-      else if (command == "L") goLeft();
-      else if (command == "R") goRight();
-      else if (command == "I") goAheadRight();
-      else if (command == "G") goAheadLeft();
-      else if (command == "J") goBackRight();
-      else if (command == "H") goBackLeft();
-      else if (command == "0") speedCar = 400;
-      else if (command == "1") speedCar = 470;
-      else if (command == "2") speedCar = 540;
-      else if (command == "3") speedCar = 610;
-      else if (command == "4") speedCar = 680;
-      else if (command == "5") speedCar = 750;
-      else if (command == "6") speedCar = 820;
-      else if (command == "7") speedCar = 890;
-      else if (command == "8") speedCar = 960;
-      else if (command == "9") speedCar = 1023;
-      else if (command == "S") stopRobot();
+void loop() {
+  server.handleClient();
 }
 
-void HTTP_handleRoot(void) 
-{
-
-if( server.hasArg("State") )
-
-  {
-       Serial.println(server.arg("State"));
-  }
-  
-  server.send ( 200, "text/html", "" );
-  
-  delay(1);
+// ================= WEB PAGE =================
+void handleRoot() {
+  String html = R"rawliteral(
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f4f7;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
+.container {
+  max-width: 360px;
+  margin: auto;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 100px;
+  height: 55px;
+  font-size: 16px;
+  margin: 6px;
+  border: none;
+  border-radius: 8px;
+  background: #4a6fa5;
+  color: white;
+}
+
+.btn:active {
+  background: #395a85;
+}
+
+.stop {
+  background: #d9534f;
+}
+
+.stop:active {
+  background: #b52b27;
+}
+
+.speed-box {
+  margin-top: 20px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+input[type=range] {
+  width: 100%;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h2>Wi-Fi Robot Controller</h2>
+
+  <!-- Forward -->
+  <button class="btn"
+    onmousedown="cmd('F')" onmouseup="cmd('S')"
+    ontouchstart="cmd('F')" ontouchend="cmd('S')">
+    Forward
+  </button><br>
+
+  <!-- Left | Stop | Right -->
+  <button class="btn"
+    onmousedown="cmd('L')" onmouseup="cmd('S')"
+    ontouchstart="cmd('L')" ontouchend="cmd('S')">
+    Left
+  </button>
+
+  <button class="btn stop" onclick="cmd('S')">
+    Stop
+  </button>
+
+  <button class="btn"
+    onmousedown="cmd('R')" onmouseup="cmd('S')"
+    ontouchstart="cmd('R')" ontouchend="cmd('S')">
+    Right
+  </button><br>
+
+  <!-- Backward -->
+  <button class="btn"
+    onmousedown="cmd('B')" onmouseup="cmd('S')"
+    ontouchstart="cmd('B')" ontouchend="cmd('S')">
+    Backward
+  </button>
+
+  <div class="speed-box">
+    <p>Speed Control</p>
+    <input type="range" min="0" max="1023" value="800"
+           onchange="setSpeed(this.value)">
+  </div>
+</div>
+
+<script>
+function cmd(c){
+  fetch('/move?dir=' + c);
+}
+function setSpeed(v){
+  fetch('/speed?val=' + v);
+}
+</script>
+</body>
+</html>
+)rawliteral";
+
+  server.send(200, "text/html", html);
+}
+
+
+// ================= CONTROL HANDLERS =================
+void handleMove() {
+  String dir = server.arg("dir");
+
+  if (dir == "F") forward();
+  else if (dir == "B") backward();
+  else if (dir == "L") left();
+  else if (dir == "R") right();
+  else stopMotor();
+
+  server.send(200, "text/plain", "OK");
+}
+
+void handleSpeed() {
+  speedVal = server.arg("val").toInt();
+  analogWrite(ENA, speedVal);
+  analogWrite(ENB, speedVal);
+  server.send(200, "text/plain", "Speed Set");
+}
+
+// ================= MOTOR FUNCTIONS =================
+void forward() {
+  digitalWrite(IN1, HIGH); digitalWrite(IN2, LOW);
+  digitalWrite(IN3, HIGH); digitalWrite(IN4, LOW);
+}
+
+void backward() {
+  digitalWrite(IN1, LOW); digitalWrite(IN2, HIGH);
+  digitalWrite(IN3, LOW); digitalWrite(IN4, HIGH);
+}
+
+void left() {
+  digitalWrite(IN1, LOW); digitalWrite(IN2, HIGH);
+  digitalWrite(IN3, HIGH); digitalWrite(IN4, LOW);
+}
+
+void right() {
+  digitalWrite(IN1, HIGH); digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW); digitalWrite(IN4, HIGH);
+}
+
+void stopMotor() {
+  digitalWrite(IN1, LOW); digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW); digitalWrite(IN4, LOW);
+}
  __________________________________________________________________________________________________________________________________________________________________
 
 
