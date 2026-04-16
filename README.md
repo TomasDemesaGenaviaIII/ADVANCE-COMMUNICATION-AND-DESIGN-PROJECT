@@ -146,7 +146,7 @@
 
 >> # 🤖PROJECT PICTURE
 
-## TOPVIEW
+## TOP VIEW
 
 <img width="550" height="500" alt="image" src="https://github.com/user-attachments/assets/e99cf035-b42b-446a-b593-4cc54c20b482" />
 
@@ -161,7 +161,7 @@
 <img width="550" height="500" alt="image" src="https://github.com/user-attachments/assets/fecaa076-ea4e-4872-819a-c888a85e75e6" />
 
 
-## ISOMETRIC 
+## ISOMETRIC VIEW
 
 <img width="550" height="500" alt="image" src="https://github.com/user-attachments/assets/b8137f50-26d4-4d96-a00c-d426005e7b5e" />
 
