@@ -51,4 +51,8 @@
 
 ># 🖋️L298N Motor Driver
 
+ The L298N Motor Driver Module is a dual H-bridge motor driver commonly used in RC robots and other mobile robotics projects to control DC motors. It serves as an interface between a low-power microcontroller such as an ESP8266 or Arduino and high-power motors, allowing the robot to move without damaging the controller. In an RC robot system, its main function is to control both the direction and speed of the motors, enabling movements such as forward, backward, left turn, right turn, and stop. It achieves this by receiving digital signals from the microcontroller and then switching the motor voltage polarity internally to control rotation direction. Additionally, it supports PWM (Pulse Width Modulation), which allows smooth speed control by adjusting the power delivered to the motors. The L298N is also responsible for handling higher voltage and current from an external power supply, protecting the microcontroller from electrical damage while ensuring stable motor operation.
+
+ The L298N is widely used in 2-wheel RC robots because it can independently drive two DC motors, making it ideal for differential steering systems. It is designed to work with motor supply voltages ranging from 7V to 35V and can typically handle up to 2A continuous current per channel, depending on cooling conditions. The module includes built-in protection features such as flyback diodes to prevent voltage spikes caused by motor operation, as well as a heat sink to manage thermal dissipation. Because of its simplicity, affordability, and compatibility with many microcontrollers, the L298N remains one of the most popular motor drivers in beginner to intermediate robotics projects, especially in educational RC robot designs.
+
 
