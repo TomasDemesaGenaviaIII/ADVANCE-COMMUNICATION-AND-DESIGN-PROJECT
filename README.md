@@ -141,7 +141,13 @@
 
 
 
-/TABLE
+| Component        | Quantity | Description              |
+|-----------------|----------|--------------------------|
+| ESP8266 NodeMCU | 1        | Main controller          |
+| L298N Driver    | 1        | Motor driver module      |
+| DC Motor        | 2        | Robot movement           |
+| Battery Pack    | 1        | Power source             |
+| Jumper Wires    | Many     | Connections              |
 
 
 
