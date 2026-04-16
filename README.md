@@ -117,19 +117,19 @@
 >> # 🛠️LIST OF COMPONENT
 
 
-| No. | Component | Description |
-|-----|-----------|-------------|
-| 1 | ESP8266 NodeMCU | Main WiFi microcontroller |
-| 2 | L298N Motor Driver | Controls direction and speed of motors |
-| 3 | Wheel (65mm) | Robot movement support |
-| 4 | DC Gear Motor (915 RPM) | Provides torque and motion |
-| 5 | Metal Ball Caster | Front/Rear support wheel |
-| 6 | Hexagonal Brass Copper (4mm) | Mechanical spacers/support |
-| 7 | 18650 Lithium-ion Battery (3.7V 2200mAh) | Power supply |
-| 8 | Battery Holder | Holds and connects battery cells |
-| 9 | Jumper Wires | Electrical connections |
-| 10 | Solid Wire Gauge 22 | Internal wiring |
-| 11 | Acrylic (Chassis) | Robot body structure |
+| QUANTITY | Component | Description | Amount |
+|-----|-----------|-------------|-------------|
+| 1 | ESP8266 NodeMCU | Main WiFi microcontroller | 135 |
+| 1 | L298N Motor Driver | Controls direction and speed of motors | 75 |
+| 2 | Wheel (65mm) | Robot movement support | 250 |
+| 2 | DC Gear Motor (915 RPM) | Provides torque and motion | 600 |
+| 1 | Metal Ball Caster | Front/Rear support wheel | 62 |
+| 2 | Hexagonal Brass Copper (4mm) | Mechanical spacers/support | 98 |
+| 3 | 18650 Lithium-ion Battery (3.7V 2200mAh) | Power supply | 300 |
+| 1 | Battery Holder | Holds and connects battery cells | 70 |
+| FEW | Jumper Wires | Electrical connections | 0.00 |
+| FEW | Solid Wire Gauge 22 | Internal wiring | 0.00 |
+| 1 | Acrylic (Chassis) | Robot body structure | 150 |
 
 
 
