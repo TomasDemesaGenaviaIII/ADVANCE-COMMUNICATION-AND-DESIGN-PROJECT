@@ -12,15 +12,23 @@
 
 ## 👉SPECIFICATION
 
-1. Microcontroller: 32-bit Tensilica L106
-2. Operating Voltage: 3.3V (NOT 5V tolerant)
-3. Input Voltage (NodeMCU board): 5V via USB (regulated to 3.3V)
-4. Clock Speed: 80 MHz (can go up to 160 MHz)
-5. WiFi Standard: IEEE 802.11 b/g/n (2.4 GHz)
-6. GPIO Pins: Around 11 usable digital I/O pins (varies by board)
-7. ADC: 1 analog input (0–1V range)
-8. Flash Memory: Typically 4MB (varies by module)
-9. Communication Protocols: UART, SPI, I2C, PWM
+➥ 1. Microcontroller: 32-bit Tensilica L106
+
+➥ 2. Operating Voltage: 3.3V (NOT 5V tolerant)
+
+➥ 3. Input Voltage (NodeMCU board): 5V via USB (regulated to 3.3V)
+
+➥ 4. Clock Speed: 80 MHz (can go up to 160 MHz)
+
+➥ 5. WiFi Standard: IEEE 802.11 b/g/n (2.4 GHz)
+
+➥ 6. GPIO Pins: Around 11 usable digital I/O pins (varies by board)
+
+➥ 7. ADC: 1 analog input (0–1V range)
+
+➥ 8. Flash Memory: Typically 4MB (varies by module)
+
+➥ 9. Communication Protocols: UART, SPI, I2C, PWM
 
 
  ## 👉CHARACTERISTICS
