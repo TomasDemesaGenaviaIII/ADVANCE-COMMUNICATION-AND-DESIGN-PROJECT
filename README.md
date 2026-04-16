@@ -79,3 +79,33 @@
 
 ➥ 10. Protection Features: Overheating protection (basic), voltage drop protection (diode-based)
 
+
+ ## 👉CHARACTERISTICS
+
+
+➥ 1. Based on dual H-bridge circuit design for full motor direction control
+
+➥ 2. Can drive 2 DC motors independently or 1 stepper motor
+
+➥ 3. Compatible with 5V TTL logic signals from microcontrollers like ESP8266 and Arduino
+
+➥ 4. Supports motor supply voltage from 7V to 35V
+
+➥ 5. Provides up to 2A continuous current per channel (with proper cooling)
+
+➥ 6. Allows PWM control for adjustable motor speed
+
+➥ 7. Includes built-in 5V regulator (on most modules) for logic power supply
+
+➥ 8. Equipped with protection diodes against back EMF from motors
+
+➥ 9. Uses a heatsink for thermal management during operation
+
+➥ 10. Simple and widely used in RC robots and educational robotics projects
+
+➥ 11. Low cost and easily available, making it ideal for beginners
+
+➥ 12. Suitable for differential drive RC robot systems (left and right motor control)
+
+
+
