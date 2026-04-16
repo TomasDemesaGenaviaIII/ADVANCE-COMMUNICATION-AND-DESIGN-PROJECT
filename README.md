@@ -4,6 +4,7 @@
  An RC (remote-controlled) robot is a simple robotic system that can be controlled wirelessly from a distance using a remote device such as a smartphone, joystick, or web interface. Instead of manual operation, it receives commands through a wireless communication module like the ESP8266, which processes the signals and controls the movement of the robot.
 
  The robot typically uses a motor driver such as the L298N to control DC motors that drive the wheels, allowing it to move forward, backward, and turn left or right. This setup makes it a practical project for learning basic robotics concepts such as motor control, wireless communication, and embedded programming.
+ __________________________________________________________________________________________________________________________________________________________________
 
  ># 🖋️ESP8266 MODULE
 
@@ -107,17 +108,21 @@
 
 ➥ 12. Suitable for differential drive RC robot systems (left and right motor control)
 
-
+ __________________________________________________________________________________________________________________________________________________________________
 
 
 >> # ▶CONCEPTUAL FRAMEWORK
 
 <img width="889" height="446" alt="image" src="https://github.com/user-attachments/assets/91a7ea2b-5c88-41be-857b-42b0850d9aea" />
 
+ __________________________________________________________________________________________________________________________________________________________________
+
 
 >> # ▶BLOCK Diagram
 
 <img width="1022" height="336" alt="image" src="https://github.com/user-attachments/assets/15929d39-d6b5-4de7-ac79-9658dc2fe1f6" />
+
+ __________________________________________________________________________________________________________________________________________________________________
 
 
 >> # 🛠️LIST OF COMPONENT
@@ -137,7 +142,7 @@
 | FEW | Solid Wire Gauge 22 | Internal wiring | 0.00 |
 | 1 | Acrylic (Chassis) | Robot body structure | 150 |
 
-
+ __________________________________________________________________________________________________________________________________________________________________
 
 
 
