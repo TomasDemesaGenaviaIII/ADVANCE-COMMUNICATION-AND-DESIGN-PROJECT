@@ -1,4 +1,4 @@
-# REMOTE CONTROL ROBOT USING ESP8266 WITH L298N
+# 🤖REMOTE CONTROL ROBOT USING ESP8266 WITH L298N🚚
 >> # INTRODUCTION
 
  An RC (remote-controlled) robot is a simple robotic system that can be controlled wirelessly from a distance using a remote device such as a smartphone, joystick, or web interface. Instead of manual operation, it receives commands through a wireless communication module like the ESP8266, which processes the signals and controls the movement of the robot.
@@ -106,6 +106,14 @@
 ➥ 11. Low cost and easily available, making it ideal for beginners
 
 ➥ 12. Suitable for differential drive RC robot systems (left and right motor control)
+
+
+>> # ▶BLOCK Diagram
+
+<img width="1022" height="336" alt="image" src="https://github.com/user-attachments/assets/15929d39-d6b5-4de7-ac79-9658dc2fe1f6" />
+
+
+
 
 
 
