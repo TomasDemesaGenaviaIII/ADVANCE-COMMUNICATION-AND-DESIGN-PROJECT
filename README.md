@@ -332,7 +332,6 @@ function setSpeed(v){
 }
 
 
-// ================= CONTROL HANDLERS =================
 void handleMove() {
   String dir = server.arg("dir");
 
@@ -352,7 +351,6 @@ void handleSpeed() {
   server.send(200, "text/plain", "Speed Set");
 }
 
-// ================= MOTOR FUNCTIONS =================
 void forward() {
   digitalWrite(IN1, HIGH); digitalWrite(IN2, LOW);
   digitalWrite(IN3, HIGH); digitalWrite(IN4, LOW);
