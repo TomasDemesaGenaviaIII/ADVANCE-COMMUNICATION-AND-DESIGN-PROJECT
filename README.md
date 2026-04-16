@@ -26,13 +26,13 @@
  ## 👉CHARACTERISTICS
 
 
-➥1. Built-in WiFi: Allows direct wireless communication without extra modules
-➥2. Low Cost: Very affordable, ideal for student and hobby projects
-➥3. Low Power Consumption: Efficient for small IoT and robotics systems
-➥4. Compact Size: Small and easy to integrate into circuits
-➥5. Programmable with Arduino IDE: Easy for beginners to use
-➥6. Suitable for IoT: Commonly used in smart devices and wireless control systems
-➥7. Limited GPIO Voltage (3.3V): Requires caution when connecting to 5V components
+➥ 1. Built-in WiFi: Allows direct wireless communication without extra modules
+➥ 2. Low Cost: Very affordable, ideal for student and hobby projects
+➥ 3. Low Power Consumption: Efficient for small IoT and robotics systems
+➥ 4. Compact Size: Small and easy to integrate into circuits
+➥ 5. Programmable with Arduino IDE: Easy for beginners to use
+➥ 6. Suitable for IoT: Commonly used in smart devices and wireless control systems
+➥ 7. Limited GPIO Voltage (3.3V): Requires caution when connecting to 5V components
 
 
 ># 🖋️L298N Motor Driver
