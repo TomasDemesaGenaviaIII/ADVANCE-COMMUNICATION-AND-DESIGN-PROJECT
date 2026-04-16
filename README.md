@@ -8,3 +8,16 @@
 >> # ESP8266 MODULE
 
  The ESP8266 is a low-cost WiFi microcontroller that acts as the “brain” of an RC robot. It receives commands wirelessly from a phone or controller and processes them to control the robot’s movements. By sending signals to a motor driver like the L298N, it manages the speed and direction of the DC motors, allowing the robot to move forward, backward, and turn. Its built-in WiFi makes it ideal for building simple and efficient wireless control systems for robotics projects.
+
+
+>>SPECIFICATION
+
+1. Microcontroller: 32-bit Tensilica L106
+2. Operating Voltage: 3.3V (NOT 5V tolerant)
+3. Input Voltage (NodeMCU board): 5V via USB (regulated to 3.3V)
+4. Clock Speed: 80 MHz (can go up to 160 MHz)
+5. WiFi Standard: IEEE 802.11 b/g/n (2.4 GHz)
+6. GPIO Pins: Around 11 usable digital I/O pins (varies by board)
+7. ADC: 1 analog input (0–1V range)
+8. Flash Memory: Typically 4MB (varies by module)
+9. Communication Protocols: UART, SPI, I2C, PWM
