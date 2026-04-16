@@ -173,7 +173,6 @@
 
 >> # 👩🏻‍💻ARDUINO CODES
 
->>
 #define ENA   14                    
 #define IN_1  15                 
 #define IN_3  2           
@@ -183,23 +182,30 @@
 #include <WiFiClient.h> 
 #include <ESP8266WebServer.h>
 
+
 String command;            
 int speedCar = 915;         
 int speed_Coeff = 3;
 
+
 const char* ssid = "Wifi Car";
 ESP8266WebServer server(80);
 
+
 void setup() {
+
  
  pinMode(ENA, OUTPUT);  
  pinMode(IN_1, OUTPUT);
  pinMode(IN_3, OUTPUT);
+
    
   Serial.begin(115200);
+
   
   WiFi.mode(WIFI_AP);
   WiFi.softAP(ssid);
+
 
   IPAddress myIP = WiFi.softAPIP();
   Serial.print("AP IP address: ");
@@ -209,12 +215,14 @@ void setup() {
      server.begin();    
 }
 
+
 void goAhead()
   { 
       digitalWrite(IN_1, HIGH);
       digitalWrite(IN_3, HIGH);
       analogWrite(ENA, speedCar);
   }
+
 
 void goBack()
   { 
@@ -223,12 +231,14 @@ void goBack()
       analogWrite(ENA, speedCar);
   }
 
+
 void goRight()
   { 
       digitalWrite(IN_1, HIGH);
       digitalWrite(IN_3, LOW);
       analogWrite(ENA, speedCar);
   }
+
 
 void goLeft()
   {
@@ -237,12 +247,14 @@ void goLeft()
       analogWrite(ENA, speedCar);
   }
 
+
 void goAheadRight()
    {
       digitalWrite(IN_1, LOW);
       digitalWrite(IN_3, HIGH);
       analogWrite(ENA, speedCar/speed_Coeff);
    }
+
 
 void goAheadLeft()
    {
@@ -251,12 +263,14 @@ void goAheadLeft()
       analogWrite(ENA, speedCar/speed_Coeff);
    }
 
+
 void goBackRight()
   { 
       digitalWrite(IN_1, LOW);
       digitalWrite(IN_3, HIGH);
       analogWrite(ENA, speedCar/speed_Coeff);
   }
+
 
 void goBackLeft()
   { 
@@ -265,12 +279,14 @@ void goBackLeft()
       analogWrite(ENA, speedCar);
   }
 
+
 void stopRobot()
  {  
       digitalWrite(IN_1, LOW);
       digitalWrite(IN_3, LOW);
       analogWrite(ENA, speedCar);
  }
+
 
 void loop() {
     server.handleClient();
@@ -296,7 +312,9 @@ void loop() {
       else if (command == "S") stopRobot();
 }
 
+
 void HTTP_handleRoot(void) {
+
 
 if( server.hasArg("State") ){
        Serial.println(server.arg("State"));
@@ -306,3 +324,8 @@ if( server.hasArg("State") ){
 }
 
  __________________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
