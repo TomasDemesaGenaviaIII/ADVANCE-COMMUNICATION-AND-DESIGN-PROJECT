@@ -175,9 +175,12 @@
 
 #define ENA   14                    
 #define IN_1  15                 
-#define IN_3  2           
+#define IN_3  2 
+
 #include <ESP8266WiFi.h>
+
 #include <WiFiClient.h> 
+
 #include <ESP8266WebServer.h>
 
 String command;            
