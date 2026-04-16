@@ -118,7 +118,7 @@
  __________________________________________________________________________________________________________________________________________________________________
 
 
->> # ▶BLOCK Diagram
+>> # ▶BLOCK DiAGRAM
 
 <img width="1022" height="336" alt="image" src="https://github.com/user-attachments/assets/15929d39-d6b5-4de7-ac79-9658dc2fe1f6" />
 
@@ -144,9 +144,32 @@
 
  __________________________________________________________________________________________________________________________________________________________________
 
+>> # 🤖PROJECT PICTURE
+
+## TOPVIEW
+
+<img width="550" height="500" alt="image" src="https://github.com/user-attachments/assets/e99cf035-b42b-446a-b593-4cc54c20b482" />
 
 
+## SIDE VIEW
 
+<img width="550" height="500" alt="image" src="https://github.com/user-attachments/assets/dae0676a-c5bb-4a97-9dad-5ca6fb5aec85" />
+
+
+## FRONT VIEW 
+
+<img width="550" height="500" alt="image" src="https://github.com/user-attachments/assets/fecaa076-ea4e-4872-819a-c888a85e75e6" />
+
+
+## ISOMETRIC 
+
+<img width="550" height="500" alt="image" src="https://github.com/user-attachments/assets/b8137f50-26d4-4d96-a00c-d426005e7b5e" />
+
+## BACK VIEW
+
+<img width="550" height="500" alt="image" src="https://github.com/user-attachments/assets/4946971f-b9b6-4200-9bf2-83fc459eada1" />
+
+ __________________________________________________________________________________________________________________________________________________________________
 
 
 
