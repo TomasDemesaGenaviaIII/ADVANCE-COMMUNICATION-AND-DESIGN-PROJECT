@@ -108,9 +108,28 @@
 ➥ 12. Suitable for differential drive RC robot systems (left and right motor control)
 
 
+
 >> # ▶BLOCK Diagram
 
 <img width="1022" height="336" alt="image" src="https://github.com/user-attachments/assets/15929d39-d6b5-4de7-ac79-9658dc2fe1f6" />
+
+
+>> # 🛠️LIST OF COMPONENT
+
+
+➥ 1. ESP8266 NODEMCU
+➥ 2. L298N MOTOR DRIVER
+➥ 3. 2PCS WHEEL 65mm
+➥ 4. 2PCS DC GEAR MOTOR 915RPM
+➥ 5. METAL BALL CASTER
+➥ 6. HEXAGONAL BRASS COOPER 4mm
+➥ 7. PK CELL 2200mAh lithiu-ion 18650 Batt 3.7v
+➥ 8. PK CELL Holder
+➥ 9. jumping wires
+➥ 10. Solid wire Guage 22
+➥ 11. ACRYLIC (CHASSIS)
+
+
 
 
 
