@@ -213,7 +213,6 @@ void loop() {
   server.handleClient();
 }
 
-// ================= WEB PAGE =================
 void handleRoot() {
   String html = R"rawliteral(
 <!DOCTYPE html>
@@ -278,7 +277,6 @@ input[type=range] {
 
 <body>
 <div class="container">
-  <h2>Wi-Fi Robot Controller</h2>
 
   <!-- Forward -->
   <button class="btn"
