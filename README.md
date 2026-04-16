@@ -112,8 +112,7 @@
 
 >> # ▶CONCEPTUAL FRAMEWORK
 
-<img width="906" height="439" alt="image" src="https://github.com/user-attachments/assets/2555575d-ae71-4ae8-a19f-9a388f180ae8" />
-
+<img width="889" height="446" alt="image" src="https://github.com/user-attachments/assets/91a7ea2b-5c88-41be-857b-42b0850d9aea" />
 
 
 >> # ▶BLOCK Diagram
