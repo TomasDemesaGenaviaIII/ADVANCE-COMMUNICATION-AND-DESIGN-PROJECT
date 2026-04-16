@@ -187,12 +187,15 @@ int speedCar = 915;
 int speed_Coeff = 3;
 
 const char* ssid = "Wifi Car";
+
 ESP8266WebServer server(80);
 
 void setup() {
  
- pinMode(ENA, OUTPUT);  
+ pinMode(ENA, OUTPUT); 
+ 
  pinMode(IN_1, OUTPUT);
+ 
  pinMode(IN_3, OUTPUT);
   
   
@@ -201,11 +204,15 @@ void setup() {
 
 
   WiFi.mode(WIFI_AP);
+  
   WiFi.softAP(ssid);
 
   IPAddress myIP = WiFi.softAPIP();
+  
   Serial.print("AP IP address: ");
+  
   Serial.println(myIP);
+  
  
 
      server.on ( "/", HTTP_handleRoot );
@@ -316,10 +323,13 @@ void HTTP_handleRoot(void)
 {
 
 if( server.hasArg("State") )
+
   {
        Serial.println(server.arg("State"));
   }
+  
   server.send ( 200, "text/html", "" );
+  
   delay(1);
 }
 
