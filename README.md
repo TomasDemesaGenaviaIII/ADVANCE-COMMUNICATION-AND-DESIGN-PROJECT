@@ -213,7 +213,8 @@ void setup() {
      server.begin();    
 }
 
-void goAhead(){ 
+void goAhead()
+  { 
 
       digitalWrite(IN_1, HIGH);
       digitalWrite(IN_3, HIGH);
@@ -221,63 +222,72 @@ void goAhead(){
 
   }
 
-void goBack(){ 
+void goBack()
+  { 
 
       digitalWrite(IN_1, LOW);
       digitalWrite(IN_3, LOW);
       analogWrite(ENA, speedCar);
   }
 
-void goRight(){ 
+void goRight()
+  { 
 
       digitalWrite(IN_1, HIGH);
       digitalWrite(IN_3, LOW);
       analogWrite(ENA, speedCar);
   }
 
-void goLeft(){
+void goLeft()
+  {
 
       digitalWrite(IN_1, LOW);
       digitalWrite(IN_3, HIGH);
       analogWrite(ENA, speedCar);
   }
 
-void goAheadRight(){
+void goAheadRight()
+   {
       
       digitalWrite(IN_1, LOW);
       digitalWrite(IN_3, HIGH);
       analogWrite(ENA, speedCar/speed_Coeff);
    }
 
-void goAheadLeft(){
+void goAheadLeft()
+  {
 
       digitalWrite(IN_1, HIGH);
       digitalWrite(IN_3, LOW);
       analogWrite(ENA, speedCar/speed_Coeff);
   }
 
-void goBackRight(){ 
+void goBackRight()
+  { 
 
       digitalWrite(IN_1, LOW);
       digitalWrite(IN_3, HIGH);
       analogWrite(ENA, speedCar/speed_Coeff);
   }
 
-void goBackLeft(){ 
+void goBackLeft()
+  { 
 
       digitalWrite(IN_1, HIGH);
       digitalWrite(IN_3, LOW);
       analogWrite(ENA, speedCar);
   }
 
-void stopRobot(){  
+void stopRobot()
+ {  
 
       digitalWrite(IN_1, LOW);
       digitalWrite(IN_3, LOW);
       analogWrite(ENA, speedCar);
  }
 
-void loop() {
+void loop() 
+{
     server.handleClient();
     
       command = server.arg("State");
@@ -302,9 +312,11 @@ void loop() {
       else if (command == "S") stopRobot();
 }
 
-void HTTP_handleRoot(void) {
+void HTTP_handleRoot(void) 
+{
 
-if( server.hasArg("State") ){
+if( server.hasArg("State") )
+  {
        Serial.println(server.arg("State"));
   }
   server.send ( 200, "text/html", "" );
