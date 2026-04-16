@@ -56,3 +56,26 @@
  The L298N is widely used in 2-wheel RC robots because it can independently drive two DC motors, making it ideal for differential steering systems. It is designed to work with motor supply voltages ranging from 7V to 35V and can typically handle up to 2A continuous current per channel, depending on cooling conditions. The module includes built-in protection features such as flyback diodes to prevent voltage spikes caused by motor operation, as well as a heat sink to manage thermal dissipation. Because of its simplicity, affordability, and compatibility with many microcontrollers, the L298N remains one of the most popular motor drivers in beginner to intermediate robotics projects, especially in educational RC robot designs.
 
 
+## 👉SPECIFICATION
+
+
+➥ 1. Driver Type: Dual full H-Bridge motor driver
+
+➥ 2. Motor Channels: 2 DC motors or 1 stepper motor
+
+➥ 3. Operating Voltage (Logic): 5V
+
+➥ 4. Motor Supply Voltage: 7V – 35V
+
+➥ 5. Continuous Current per Channel: 2A
+
+➥ 6. Peak Current per Channel: up to 3A (short bursts)
+
+➥ 7. Logic Input Voltage: 5V TTL compatible
+
+➥ 8. PWM Frequency Support: Yes (speed control)
+
+➥ 9. Onboard Regulator: 5V regulator (some modules include jumper control)
+
+➥ 10. Protection Features: Overheating protection (basic), voltage drop protection (diode-based)
+
