@@ -117,37 +117,22 @@
 >> # 🛠️LIST OF COMPONENT
 
 
-➥ 1. ESP8266 NODEMCU
-
-➥ 2. L298N MOTOR DRIVER
-
-➥ 3. 2PCS WHEEL 65mm
-
-➥ 4. 2PCS DC GEAR MOTOR 915RPM
-
-➥ 5. METAL BALL CASTER
-
-➥ 6. HEXAGONAL BRASS COOPER 4mm
-
-➥ 7. PK CELL 2200mAh lithiu-ion 18650 Batt 3.7v
-
-➥ 8. PK CELL Holder
-
-➥ 9. jumping wires
-
-➥ 10. Solid wire Guage 22
-
-➥ 11. ACRYLIC (CHASSIS)
+| No. | Component | Description |
+|-----|-----------|-------------|
+| 1 | ESP8266 NodeMCU | Main WiFi microcontroller |
+| 2 | L298N Motor Driver | Controls direction and speed of motors |
+| 3 | Wheel (65mm) | Robot movement support |
+| 4 | DC Gear Motor (915 RPM) | Provides torque and motion |
+| 5 | Metal Ball Caster | Front/Rear support wheel |
+| 6 | Hexagonal Brass Copper (4mm) | Mechanical spacers/support |
+| 7 | 18650 Lithium-ion Battery (3.7V 2200mAh) | Power supply |
+| 8 | Battery Holder | Holds and connects battery cells |
+| 9 | Jumper Wires | Electrical connections |
+| 10 | Solid Wire Gauge 22 | Internal wiring |
+| 11 | Acrylic (Chassis) | Robot body structure |
 
 
 
-| Component        | Quantity | Description              |
-|-----------------|----------|--------------------------|
-| ESP8266 NodeMCU | 1        | Main controller          |
-| L298N Driver    | 1        | Motor driver module      |
-| DC Motor        | 2        | Robot movement           |
-| Battery Pack    | 1        | Power source             |
-| Jumper Wires    | Many     | Connections              |
 
 
 
