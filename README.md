@@ -23,7 +23,7 @@
 9. Communication Protocols: UART, SPI, I2C, PWM
 
 
-  >## 👉CHARACTERISTICS
+  >>>>>>## 👉CHARACTERISTICS
 
 
 1. Built-in WiFi: Allows direct wireless communication without extra modules
